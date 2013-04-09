@@ -1,0 +1,6 @@
+shortstack = ENV['SHORTSTACK_PATH']
+
+window do
+  run "cd #{shortstack}"
+  run "foreman start -f Procfile.dev"
+end

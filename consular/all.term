@@ -1,0 +1,6 @@
+run 'consular start shortstack'
+run 'consular start designer'
+run 'consular start admin'
+run 'consular start tabserver'
+run 'consular start messaging'
+

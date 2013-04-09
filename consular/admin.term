@@ -1,0 +1,6 @@
+admin = ENV['ADMIN_PATH']
+
+window do
+  run "cd #{admin}"
+  run "foreman start -f Procfile.dev"
+end

@@ -1,0 +1,6 @@
+tabserver = ENV['TABSERVER_PATH']
+
+window do
+  run "cd #{tabserver}"
+  run "foreman start -f Procfile.dev"
+end

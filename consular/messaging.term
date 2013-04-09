@@ -1,0 +1,6 @@
+messaging = ENV['MESSAGING_PATH']
+
+window do
+  run "cd #{messaging}"
+  run "foreman start -f Procfile.dev"
+end

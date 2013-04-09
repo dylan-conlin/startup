@@ -1,0 +1,6 @@
+designer = ENV['DESIGNER_PATH']
+
+window do
+  run "cd #{designer}"
+  run "foreman start -f Procfile.dev"
+end
