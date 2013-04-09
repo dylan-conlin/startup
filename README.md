@@ -39,9 +39,9 @@ with
 
 **Example Command Line Usage**
 
-    consular list # lists all available consular scripts
-    consular start shortstack                                  # starts shortstack via foreman
-    consular start all                                         # starts all apps
-    consular start shortstack; consular start designer         # starts shortstack and designer
+    consular list                                        # lists all available consular scripts
+    consular start shortstack                            # starts shortstack via foreman
+    consular start all                                   # starts all apps
+    consular start shortstack; consular start designer   # starts shortstack and designer
 
 and don't forget about typing `control-r consular` from the command line to get at your previous commands!
