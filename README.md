@@ -15,7 +15,7 @@ add one of the following lines to your `.consularc`:
 
 configure the following variables in your `.bash_profile` or `.zprofile`:
 
-    # configure the paths below to match the location of each app. Make
+    # configure the paths below to match the location of each app.
     # set each path starting from your ~/ directory
 
     export SHORTSTACK_PATH="~/sites/shortstack"
