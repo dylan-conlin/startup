@@ -1,4 +1,4 @@
-**Installation**
+# Installation #
 
 install the [heroku toolbelt](https://toolbelt.heroku.com/) to get foreman
 
@@ -26,8 +26,20 @@ configure the following variables in your `.bash_profile` or `.zprofile`:
 
 (after saving your bash profile, don't forget to restart your Terminal--I always forget about this)
 
-Finally, to avoid any port conflicts, I setup the default configuration to look for a `Procfile.dev` in each app's root directory. If you don't want to create a development procfile and would like to use the production `Procfile` instead, configure each consular script as follows:
+Finally, to avoid any port conflicts, I setup the default
+configuration to look for a `Procfile.dev` in each app's root
+directory. Here are two of mine. The most notable difference is that I've
+hardcoded the port settings:
 
+    # ~/sites/shortstack/Procfile.dev        
+    shortstack: bundle exec unicorn -p 3000 -c ./config/unicorn.rb
+    shortstack-worker: bundle exec rake jobs:work
+
+    # ~/sites/shortstack-designer/Procfile.dev        
+    web: bundle exec unicorn -p 3002 -c ./config/unicorn.rb
+    log: tail -f -n 40 ./log/development.log
+
+If you don't want to create a development procfile and would like to use the production `Procfile` instead, configure each consular script as follows:
 
 in each script inside `~/.config/`, replace
     
@@ -37,11 +49,12 @@ with
 
     run "foreman start"
 
-**Example Command Line Usage**
+# Example Command Line Usage #
 
     consular list                                        # lists all available consular scripts
     consular start shortstack                            # starts shortstack via foreman
     consular start all                                   # starts all apps
     consular start shortstack; consular start designer   # starts shortstack and designer
 
-and don't forget about typing `control-r consular` from the command line to get at your previous commands!
+**Command line tip:** press `Ctrl + r`, then start typing the command or any part of the command that you are looking for. You'll see an autocomplete of a past command at your prompt. If you keep typing, you'll get more specific options. You can also press `Ctrl + r` again as many times as you want to, this goes back in your `.bash_history` to the previous matching command each time.
+
