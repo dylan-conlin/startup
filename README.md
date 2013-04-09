@@ -10,8 +10,8 @@ install the [heroku toolbelt](https://toolbelt.heroku.com/) to get foreman
 
 add one of the following lines to your `.consularc`:
 
-    require "consular-osx"      # if using Terminal    
-    require "consular-iterm"    # if using iTerm    
+    require "consular/osx"      # if using Terminal    
+    require "consular/iterm"    # if using iTerm    
 
 configure the following variables in your `.bash_profile` or `.zprofile`:
 
